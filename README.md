@@ -1,12 +1,11 @@
 # Burger
-A restaurant application that lets users input the names of burgers they'd like to eat.
+Burger is a restaurant application that lets users input the names of burgers they'd like to eat. The burger logger uses MySQL, Node, Express, Handlebars and a homemade ORM. 
 
-In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.
+The deployed app is accessible at, https://whispering-dawn-18310.herokuapp.com/. When deployed, the app will display as follows
+[Burger Image](burger.png)
 
-Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+**Methodology**
+Whenever a user submits a burger's name, the app displays the burger on the left side of the page. Each burger on the left side is accompanied by a `Devour it!` button. When the user clicks `Devour it!`, the burger moves to the right side of the page. Every burger is stored in a database, whether devoured or not.
 
-* Whenever a user submits a burger's name, your app will display the burger on the left side of the page -- waiting to be devoured.
-
-* Each burger in the waiting area also has a `Devour it!` button. When the user clicks it, the burger will move to the right side of the page.
-
-* Your app will store every burger in a database, whether devoured or not.
+**MIT**
+Licensed under the MIT license.
