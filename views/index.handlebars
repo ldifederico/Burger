@@ -5,23 +5,23 @@
 
   <ul>
     {{#each burgers}}
-      {{#unless filet-o-fish}}
-        {{> burgers/burger-block notdevoured=true}}
+      {{#unless devoured}}
+        {{> burgers/burgers-block devoured=true}}
       {{/unless}}
     {{/each}}
   </ul>
 
   <ul>
     {{#each burgers}}
-      {{#if filet-o-fish}}
-        {{> burgers/burger-block notdevoured=false}}
+      {{#if devoured}}
+        {{> burgers/burgers-block devoured=false}}
       {{/if}}
     {{/each}}
   </ul>
 
   <form class="create-form">
     <div class="form-group">
-      <button type="submit" name="notdevoured" value="0"> Devour it!
+      <button type="submit" name="devoured" value="0"> Devour it!
     </div>
 
     <br>
@@ -30,7 +30,7 @@
       <input type="text" id="ca" name="name">
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" name="devoured" value="0">Submit</button>
     <p>Enter a burger you want to eat. Click the "Submit" button.</p>
   </form>
 </body>

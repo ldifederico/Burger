@@ -5,14 +5,14 @@ var burger = require("../models/burger.js");
 router.get("/", function(req, res) {
     burger.all(function(data) {
     var hbsObject = {
-        burgers: data
+      burgers: data
     };
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-    burger.create(["name", "veggie"], [req.body.name, req.body.veggie], function(result) {
+    burger.create(["name", "devoured"], [req.body.name, req.body.devoured], function(result) {
     res.json({ id: result.insertId });
   });
 });
@@ -22,7 +22,7 @@ router.put("/api/burgers/:id", function(req, res) {
 
   burger.update(
     {
-      veggie: req.body.veggie
+      devoured: req.body.devoured
     },
     condition,
     function(result) {
