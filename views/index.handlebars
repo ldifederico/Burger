@@ -3,31 +3,35 @@
 
   <h1 style="color: tomato;">Eat-Da-Burger!</h1>
 
-  <ul>
+  <h2>Devoured</h2>
+
+  <ul style="list-style-type:none">
     {{#each burgers}}
       {{#unless devoured}}
-        {{> burgers/burgers-block devoured=true}}
+        {{> burgers/burgers-block devoured=false}}
       {{/unless}}
     {{/each}}
   </ul>
 
-  <ul>
+  <h2>Not Devoured</h2>
+
+  <ul style="list-style-type:none">
     {{#each burgers}}
       {{#if devoured}}
-        {{> burgers/burgers-block devoured=false}}
+        {{> burgers/burgers-block devoured=true}}
       {{/if}}
     {{/each}}
   </ul>
 
   <form class="create-form">
     <div class="form-group">
-      <button type="submit" name="devoured" value="0"> Devour it!
+      <button type="submit" name="devoured" value="0" checked> Devour it!</button>
     </div>
 
     <br>
-
+ 
     <div class="form-group">
-      <input type="text" id="ca" name="name">
+      <input type="text" id="ca" name="burger_name">
     </div>
 
     <button type="submit" name="devoured" value="0">Submit</button>
