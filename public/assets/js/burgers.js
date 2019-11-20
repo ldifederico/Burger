@@ -22,7 +22,7 @@ $(function() {
   
       var newBurger = {
         name: $("#ca").val().trim(),
-        sleepy: $("[name=devoured]:clicked").val().trim()
+        devoured: $("[name=devoured]:clicked").val().trim()
       };
   
       $.ajax("/api/burgers", {
