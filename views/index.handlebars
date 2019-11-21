@@ -1,40 +1,32 @@
-<body style="background: rgb(255, 214, 32, 0.69); text-align:center">
-  <img src="https://external-preview.redd.it/X2ybMJN6TqZeyJiLfWC2T5lO1sdEZTllxrDgLpZW9Tk.gif?width=640&crop=smart&format=png8&s=0a4100de2e608e5d4e845f7ce2635bcc37a038c5" style="width: 15%;">
+<img src="https://external-preview.redd.it/X2ybMJN6TqZeyJiLfWC2T5lO1sdEZTllxrDgLpZW9Tk.gif?width=640&crop=smart&format=png8&s=0a4100de2e608e5d4e845f7ce2635bcc37a038c5" style="width: 15%;">
 
-  <h1 style="color: tomato;">Eat-Da-Burger!</h1>
+<h1 style="color: tomato;">Eat-Da-Burger!</h1>
 
-  <h2>Devoured</h2>
+<h2>Devoured</h2>
 
-  <ul style="list-style-type:none">
-    {{#each burgers}}
-      {{#unless devoured}}
-        {{> burgers/burgers-block devoured=false}}
-      {{/unless}}
-    {{/each}}
-  </ul>
+<ul style="list-style-type:none">
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burgers-block devoured=false}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
-  <h2>Not Devoured</h2>
+<h2>Not Devoured</h2>
 
-  <ul style="list-style-type:none">
-    {{#each burgers}}
-      {{#if devoured}}
-        {{> burgers/burgers-block devoured=true}}
-      {{/if}}
-    {{/each}}
-  </ul>
+<ul style="list-style-type:none">
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burgers-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
 
-  <form class="create-form">
-    <div class="form-group">
-      <button type="submit" name="devoured" value="0" checked> Devour it!</button>
-    </div>
+<form class="create-form">
+  <div class="form-group">
+    <label for="ca">New burger name:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
 
-    <br>
- 
-    <div class="form-group">
-      <input type="text" id="ca" name="burger_name">
-    </div>
-
-    <button type="submit" name="devoured" value="0">Submit</button>
-    <p>Enter a burger you want to eat. Click the "Submit" button.</p>
-  </form>
-</body>
+  <button type="submit" name="devoured" value="true">Submit</button>    <p>Enter a burger you want to eat. Click the "Submit" button.</p>
+</form>
