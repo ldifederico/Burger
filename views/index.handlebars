@@ -2,7 +2,7 @@
 
 <h1 style="color: tomato;">Eat-Da-Burger!</h1>
 
-<h2>Devoured</h2>
+<h2>Not Devoured</h2>
 
 <ul style="list-style-type:none">
   {{#each burgers}}
@@ -12,7 +12,7 @@
   {{/each}}
 </ul>
 
-<h2>Not Devoured</h2>
+<h2>Devoured</h2>
 
 <ul style="list-style-type:none">
   {{#each burgers}}
@@ -28,5 +28,6 @@
     <input type="text" id="ca" name="burger_name">
   </div>
 
-  <button type="submit" name="devoured" value="true">Submit</button>    <p>Enter a burger you want to eat. Click the "Submit" button.</p>
+  <button type="submit" name="devoured" value="true">Submit</button>    
+  <p>Enter a burger you want to eat. Click the "Submit" button.</p>
 </form>
