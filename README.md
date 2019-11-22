@@ -11,6 +11,7 @@ The deployed app is accessible at, https://whispering-dawn-18310.herokuapp.com/.
 Whenever a user submits a burger's name, the app displays the burger on the left side of the page. Each burger on the left side is accompanied by a `Devour it!` button. When the user clicks `Devour it!`, the burger moves to the right side of the page. Every burger is stored in a database, whether devoured or not.
 
 **Credits**
+
 Trilogy
 
 **MIT**
