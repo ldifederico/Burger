@@ -4,7 +4,7 @@
   "description": "A restaurant application that lets users input the names of burgers they'd like to eat.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^3.1.0",
     "heroku": "^7.35.0",
     "mysql": "^2.17.1"
